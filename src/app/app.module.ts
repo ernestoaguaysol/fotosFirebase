@@ -16,13 +16,15 @@ import { AppRouting } from './app.routes';
 
 // Services
 import { CargaImagenesService } from './services/carga-imagenes.service';
+import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FotosComponent,
-    CargaComponent
+    CargaComponent,
+    NgDropFilesDirective
   ],
   imports: [
     BrowserModule,
