@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { FotosComponent } from './components/fotos/fotos.component';
 import { CargaComponent } from './components/carga/carga.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
 // routes
 import { AppRouting } from './app.routes';
 
@@ -21,7 +26,9 @@ import { CargaImagenesService } from './services/carga-imagenes.service';
   ],
   imports: [
     BrowserModule,
-    AppRouting
+    AppRouting,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [
     CargaImagenesService
